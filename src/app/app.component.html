@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="site-content">  
+  <div class="hero" data-bg-image="images/banner.png">
+    <div class="container">
+      <form action="#" class="find-location">
+        <input type="text" #cityName placeholder="Find your location..." name="cityName" ngModel>
+        <input type="submit" value="Find" (click)="getWeather(cityName.value); $event.preventDefault()">         
+      </form>
+
+    </div>
+  </div>	
+  <div class="forecast-table">
+    <div class="container">
+      <div class="forecast-container">
+        <div class="today forecast">
+          <div class="forecast-header">
+            <div id="day" class="day"></div>            
+          </div> 
+          <div class="forecast-content">
+            <div id="city" class="location"></div>
+            <div class="degree">
+              <div id="temp" class="num"></div><div class="num"><sup>o</sup>F </div>
+              </div>	
+            </div>          
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
